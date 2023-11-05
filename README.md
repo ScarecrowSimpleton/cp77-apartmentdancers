@@ -47,7 +47,9 @@ This modification does not require any DLC and will work with the base game.
 This mod is not yet released.
 
 ## Building
-TBD
+Generally, you shouldn't need to do this. You can just copy the files straight to your games mod directories. However, if you do wish to create a release zip a simple build script is included.
+
+Simply use the included "build.sh". This will generate a release-style zip for you. Run it with --help for more info.
 
 ## Stable Releases
 TBD
