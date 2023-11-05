@@ -1,0 +1,204 @@
+{
+  "lights": [
+    {
+      "color": "{1.000000, 0.000000, 0.000000, 1.000000}",
+      "uid": 21,
+      "intensity": 300,
+      "radius": 12,
+      "entity_id": "0x9F31B2EE, 39",
+      "angles": "{inner = 10.000000, outer = 150.000000}"
+    }
+  ],
+  "file_name": "apartmentdancers_objects_corpoplaza.json",
+  "customIncluded": false,
+  "name": "Apartment Dancers Objects (Corpo Plaza)",
+  "props": [
+    {
+      "tag": "Interior: Optional Objects",
+      "uid": 21,
+      "app": "default",
+      "entity_id": "0x9F31B2EE, 39",
+      "template_path": "base\\gameplay\\devices\\lighting\\industrial\\entropy_ceiling_bar_lamp\\entropy_ceiling_bar_lamp_a_3m.ent",
+      "pos": "{x = -1611.253052, y = 355.088867, z = 52.970062, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 0.000370}",
+      "name": "Ceiling Lamp Bar",
+      "scale": "nil",
+      "trigger": "{x = -1611.253052, y = 355.088867, z = 52.970062, w = 1.000000}"
+    },
+    {
+      "tag": "Interior: Optional Objects",
+      "uid": 47,
+      "app": "default",
+      "entity_id": "0x619501C6, 27",
+      "template_path": "base\\amm_props\\entity\\arasaka_curtain_h.ent",
+      "pos": "{x = -1603.324951, y = 354.682007, z = 49.200241, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 123.499992}",
+      "name": "Curtain Gold Tall Narrow 0",
+      "scale": "{x = 100.000000, y = 100.000000, z = 100.000000}",
+      "trigger": "{x = -1601.513672, y = 356.662323, z = 48.953651, w = 1.000000}"
+    },
+    {
+      "tag": "Interior: Optional Objects",
+      "uid": 48,
+      "app": "default",
+      "entity_id": "0x619501C6, 27",
+      "template_path": "base\\amm_props\\entity\\arasaka_curtain_h.ent",
+      "pos": "{x = -1600.267944, y = 354.625000, z = 49.200241, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 0.000000}",
+      "name": "Curtain Gold Tall Narrow 1",
+      "scale": "{x = 100.000000, y = 100.000000, z = 100.000000}",
+      "trigger": "{x = -1601.513672, y = 356.662323, z = 48.953651, w = 1.000000}"
+    },
+    {
+      "tag": "Interior: Optional Objects",
+      "uid": 33,
+      "app": "default",
+      "entity_id": "0xF12A1C57, 27",
+      "template_path": "base\\amm_props\\entity\\arasaka_curtain_g.ent",
+      "pos": "{x = -1605.062012, y = 357.269989, z = 49.200005, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 90.000008}",
+      "name": "Curtain Gold Tall Wide 0",
+      "scale": "{x = 100.000000, y = 100.000000, z = 100.000000}",
+      "trigger": "{x = -1601.513672, y = 356.662323, z = 48.953651, w = 1.000000}"
+    },
+    {
+      "tag": "Interior: Optional Objects",
+      "uid": 37,
+      "app": "default",
+      "entity_id": "0xF12A1C57, 27",
+      "template_path": "base\\amm_props\\entity\\arasaka_curtain_g.ent",
+      "pos": "{x = -1603.929000, y = 355.579000, z = 49.200241, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 124.000000}",
+      "name": "Curtain Gold Tall Wide 0",
+      "scale": "{x = 100.000000, y = 100.000000, z = 100.000000}",
+      "trigger": "{x = -1601.513672, y = 356.662323, z = 48.953651, w = 1.000000}"
+    },
+    {
+      "tag": "Interior: Optional Objects",
+      "uid": 38,
+      "app": "default",
+      "entity_id": "0xF12A1C57, 27",
+      "template_path": "base\\amm_props\\entity\\arasaka_curtain_g.ent",
+      "pos": "{x = -1603.589000, y = 355.069000, z = 49.200241, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 124.000000}",
+      "name": "Curtain Gold Tall Wide 1",
+      "scale": "{x = 100.000000, y = 100.000000, z = 100.000000}",
+      "trigger": "{x = -1601.513672, y = 356.662323, z = 48.953651, w = 1.000000}"
+    },
+    {
+      "tag": "Interior: Optional Objects",
+      "uid": 36,
+      "app": "default",
+      "entity_id": "0xF12A1C57, 27",
+      "template_path": "base\\amm_props\\entity\\arasaka_curtain_g.ent",
+      "pos": "{x = -1604.487000, y = 356.413000, z = 49.200241, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 124.000000}",
+      "name": "Curtain Gold Tall Wide 2",
+      "scale": "{x = 100.000000, y = 100.000000, z = 100.000000}",
+      "trigger": "{x = -1601.513672, y = 356.662323, z = 48.953651, w = 1.000000}"
+    },
+    {
+      "tag": "Interior: Optional Objects",
+      "uid": 40,
+      "app": "default",
+      "entity_id": "0xF12A1C57, 27",
+      "template_path": "base\\amm_props\\entity\\arasaka_curtain_g.ent",
+      "pos": "{x = -1603.262939, y = 354.625000, z = 49.200241, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 0.000000}",
+      "name": "Curtain Gold Tall Wide 3",
+      "scale": "{x = 100.000000, y = 100.000000, z = 100.000000}",
+      "trigger": "{x = -1601.513672, y = 356.662323, z = 48.953651, w = 1.000000}"
+    },
+    {
+      "tag": "Interior: Optional Objects",
+      "uid": 42,
+      "app": "default",
+      "entity_id": "0xF12A1C57, 27",
+      "template_path": "base\\amm_props\\entity\\arasaka_curtain_g.ent",
+      "pos": "{x = -1601.266000, y = 354.625000, z = 49.200241, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 0.000000}",
+      "name": "Curtain Gold Tall Wide 4",
+      "scale": "{x = 100.000000, y = 100.000000, z = 100.000000}",
+      "trigger": "{x = -1601.513672, y = 356.662323, z = 48.953651, w = 1.000000}"
+    },
+    {
+      "tag": "Interior: Optional Objects",
+      "uid": 43,
+      "app": "default",
+      "entity_id": "0xF12A1C57, 27",
+      "template_path": "base\\amm_props\\entity\\arasaka_curtain_g.ent",
+      "pos": "{x = -1602.267944, y = 354.625000, z = 49.200241, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 0.000000}",
+      "name": "Curtain Gold Tall Wide 5",
+      "scale": "{x = 100.000000, y = 100.000000, z = 100.000000}",
+      "trigger": "{x = -1601.513672, y = 356.662323, z = 48.953651, w = 1.000000}"
+    },
+    {
+      "tag": "Exterior: Optional Objects",
+      "uid": 49,
+      "app": "default",
+      "entity_id": "0xB2FC7F13, 27",
+      "template_path": "base\\amm_props\\entity\\konpeki_letters_v.ent",
+      "pos": "{x = -1606.540039, y = 360.696991, z = 52.605003, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 0.000000}",
+      "name": "Gold V Letter",
+      "scale": "{x = 300.000000, y = 300.000000, z = 300.000000}",
+      "trigger": "{x = -1601.513672, y = 356.662323, z = 48.953651, w = 1.000000}"
+    },
+    {
+      "tag": "Exterior: Optional Objects",
+      "uid": 46,
+      "app": "intercoms_neokitsch",
+      "entity_id": "0x567554A1, 28",
+      "template_path": "base\\gameplay\\devices\\intercom\\intercom_neokitsch.ent",
+      "pos": "{x = -1605.478027, y = 360.776672, z = 50.675003, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 90.000008}",
+      "name": "Intercom Neokitsch",
+      "scale": "nil",
+      "trigger": "{x = -1601.513672, y = 356.662323, z = 48.953651, w = 1.000000}"
+    },
+    {
+      "tag": "Interior: Optional Objects",
+      "uid": 5,
+      "app": "default",
+      "entity_id": "0xE8E17623, 28",
+      "template_path": "base\\amm_props\\entity\\bar_lounge_chair_a.ent",
+      "pos": "{x = -1612.823120, y = 354.890900, z = 49.200005, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 4.499964}",
+      "name": "Lounge Chair Black Emissive (right)",
+      "scale": "{x = 100.000000, y = 100.000000, z = 100.000000}",
+      "trigger": "{x = -1612.823120, y = 354.890900, z = 49.200005, w = 1.000000}"
+    },
+    {
+      "tag": "Interior: Required Objects",
+      "uid": 6,
+      "app": "default",
+      "entity_id": "0xE8E17623, 28",
+      "template_path": "base\\amm_props\\entity\\bar_lounge_chair_a.ent",
+      "pos": "{x = -1611.114990, y = 353.724640, z = 49.200005, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 93.999992}",
+      "name": "Lounge Chair Black Emissive (left)",
+      "scale": "{x = 100.000000, y = 100.000000, z = 100.000000}",
+      "trigger": "{x = -1611.114990, y = 353.724640, z = 49.200005, w = 1.000000}"
+    },
+    {
+      "tag": "Interior: Required Objects",
+      "uid": 2,
+      "app": "default",
+      "entity_id": "0x509B9490, 25",
+      "template_path": "base\\amm_props\\entity\\pole_dance_pole.ent",
+      "pos": "{x = -1611.253052, y = 355.088867, z = 49.200058, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 0.000037}",
+      "name": "Dance Pole",
+      "scale": "{x = 100.000000, y = 100.000000, z = 100.000000}",
+      "trigger": "{x = -1611.253052, y = 355.088867, z = 49.200058, w = 1.000000}"
+    },
+    {
+      "tag": "Interior: Optional Objects",
+      "uid": 3,
+      "app": "radio_entropy",
+      "entity_id": "0xC16974D5, 24",
+      "template_path": "base\\gameplay\\devices\\home_appliances\\radio_sets\\radio_1.ent",
+      "pos": "{x = -1606.988647, y = 351.444702, z = 50.487518, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = 50.000008}",
+      "name": "Radio",
+      "scale": "nil",
+      "trigger": "{x = -1606.988647, y = 351.444702, z = 50.487518, w = 1.000000}"
+    },
+    {
+      "tag": "Interior: Optional Objects",
+      "uid": 8,
+      "app": "default",
+      "entity_id": "0xD4F73C46, 35",
+      "template_path": "base\\amm_props\\entity\\kitsch_asian_side_table_h.ent",
+      "pos": "{x = -1612.010132, y = 354.201996, z = 49.201645, w = 1.000000, roll = 0.000000, pitch = 0.000000, yaw = -33.999966}",
+      "name": "Rich Asian Side Table H",
+      "scale": "{x = 100.000000, y = 100.000000, z = 100.000000}",
+      "trigger": "{x = -1612.010132, y = 354.201996, z = 49.201645, w = 1.000000}"
+    }
+  ]
+}
