@@ -60,7 +60,7 @@ TBD
 ## Big Thanks To These People!
 * All those who work on CET and Wolvenkit! Tons of mods would simply not exist without you!
 * All those who work on Appearance Menu Mod! You do great work!
-* donk74 for all his work on CyberScript! CyberScript is probably one of the most underrated mods for CyberPunk2077, more people need to know about his mod and the power it could yield them!
+* donk74 for all their work on CyberScript! CyberScript is probably one of the most underrated mods for CyberPunk2077, more people need to know about the mod and the power it could yield them!
 * Various other modders for all their awesome mods!
 
 ## Disclaimer
