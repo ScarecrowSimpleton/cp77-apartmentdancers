@@ -1,0 +1,250 @@
+{
+  "tag": "choice_corpoplaza_roomservice_0_dismiss",
+  "options": [ {
+    "description": "Dismiss Private Dancer",
+    "trigger": {
+      "trigger_floordancer_0_active": {
+        "variable": "corpoplaza_dancers_floordancer_0_activated",
+        "type": "boolean",
+        "value": true,
+        "comment": "Check if dancer is active",
+        "name": "check_variable",
+        "helperTitle": "Score : Custom Variable",
+        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+        "operator": "=",
+        "key": "state"
+      }
+    },
+    "context": [],
+    "icon": "WaitIcon",
+    "style": {
+      "color": {
+        "blue": 16,
+        "green": 135,
+        "red": 195
+      }
+    },
+    "requirement": [ [ "trigger_floordancer_0_active" ] ],
+    "action": [ {
+      "variable": "corpoplaza_dancers_floordancer_0_activated",
+      "name": "set_variable",
+      "helperTitle": "Variable : Set Variable",
+      "value": false,
+      "comment": "Set activation variable to false",
+      "helper": "This action will set a value for a key of a Variable ",
+      "type": "boolean",
+      "key": "state"
+    }, {
+      "helperTitle": "UI : Display Custom Notification",
+      "type": 1,
+      "helper": "This action will display Custom Notification.  Type : \r\n Undefined = 0,\r\n   Negative = 1,\r\n   Neutral = 2,\r\n   Vehicle = 3,\r\n   Apartment = 4,\r\n   Relic = 5,\r\n   Money = 6,\r\n   Reveal = 7 ",
+      "comment": "Notify user",
+      "value": "Private dancer dismissed!",
+      "duration": 5,
+      "name": "custom_notification"
+    }, {
+      "type": 1,
+      "helper": "This action will fire a subtitle on your bottom portion of the screen, The duration must complete in order for the next action to call. Type value just keep at 1 for now.",
+      "comment": "Speak to user",
+      "target": "player",
+      "speaker": "Receptionist",
+      "name": "subtitle",
+      "helperTitle": "Dialog : run a subtitle",
+      "duration": 3,
+      "title": "Sindelicious has been dismissed. She'll miss you!"
+    } ]
+  }, {
+    "description": "Dismiss Private Pole Dancer",
+    "trigger": {
+      "trigger_poledancer_0_active": {
+        "variable": "corpoplaza_dancers_poledancer_0_activated",
+        "type": "boolean",
+        "value": true,
+        "comment": "Check if dancer active",
+        "name": "check_variable",
+        "helperTitle": "Score : Custom Variable",
+        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+        "operator": "=",
+        "key": "state"
+      }
+    },
+    "context": [],
+    "icon": "WaitIcon",
+    "style": {
+      "color": {
+        "blue": 16,
+        "red": 195,
+        "green": 135
+      }
+    },
+    "requirement": [ [ "trigger_poledancer_0_active" ] ],
+    "action": [ {
+      "variable": "corpoplaza_dancers_poledancer_0_activated",
+      "name": "set_variable",
+      "helperTitle": "Variable : Set Variable",
+      "value": false,
+      "comment": "Set activation variable to false",
+      "helper": "This action will set a value for a key of a Variable ",
+      "type": "boolean",
+      "key": "state"
+    }, {
+      "helperTitle": "UI : Display Custom Notification",
+      "type": 1,
+      "helper": "This action will display Custom Notification.  Type : \r\n Undefined = 0,\r\n   Negative = 1,\r\n   Neutral = 2,\r\n   Vehicle = 3,\r\n   Apartment = 4,\r\n   Relic = 5,\r\n   Money = 6,\r\n   Reveal = 7 ",
+      "comment": "Notify user",
+      "value": "Private pole dancer dismissed!",
+      "duration": 5,
+      "name": "custom_notification"
+    }, {
+      "type": 1,
+      "helper": "This action will fire a subtitle on your bottom portion of the screen, The duration must complete in order for the next action to call. Type value just keep at 1 for now.",
+      "comment": "Speak to user",
+      "target": "player",
+      "speaker": "Receptionist",
+      "name": "subtitle",
+      "helperTitle": "Dialog : run a subtitle",
+      "duration": 3,
+      "title": "Bambi has been dismissed. She'll miss you!"
+    } ]
+  }, {
+    "description": "Dismiss Private Lapdancer",
+    "trigger": {
+      "trigger_lapdancer_0_active": {
+        "variable": "corpoplaza_dancers_lapdancer_0_activated",
+        "type": "boolean",
+        "value": true,
+        "comment": "Check if dancer active",
+        "name": "check_variable",
+        "helperTitle": "Score : Custom Variable",
+        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+        "operator": "=",
+        "key": "state"
+      }
+    },
+    "context": [],
+    "icon": "WaitIcon",
+    "style": {
+      "color": {
+        "blue": 16,
+        "red": 195,
+        "green": 135
+      }
+    },
+    "requirement": [ [ "trigger_lapdancer_0_active" ] ],
+    "action": [ {
+      "variable": "corpoplaza_dancers_lapdancer_0_activated",
+      "name": "set_variable",
+      "helperTitle": "Variable : Set Variable",
+      "value": false,
+      "comment": "Set activation variable to false",
+      "helper": "This action will set a value for a key of a Variable ",
+      "type": "boolean",
+      "key": "state"
+    }, {
+      "helperTitle": "UI : Display Custom Notification",
+      "type": 1,
+      "helper": "This action will display Custom Notification.  Type : \r\n Undefined = 0,\r\n   Negative = 1,\r\n   Neutral = 2,\r\n   Vehicle = 3,\r\n   Apartment = 4,\r\n   Relic = 5,\r\n   Money = 6,\r\n   Reveal = 7 ",
+      "comment": "Notify user",
+      "value": "Private lap dancer dismissed!",
+      "duration": 5,
+      "name": "custom_notification"
+    }, {
+      "type": 1,
+      "helper": "This action will fire a subtitle on your bottom portion of the screen, The duration must complete in order for the next action to call. Type value just keep at 1 for now.",
+      "comment": "Speak to user",
+      "target": "player",
+      "speaker": "Receptionist",
+      "name": "subtitle",
+      "helperTitle": "Dialog : run a subtitle",
+      "duration": 3,
+      "title": "Destiny has been dismissed. She'll miss you!"
+    } ]
+  }, {
+    "description": "Dismiss All Dancers",
+    "trigger": [],
+    "context": [],
+    "icon": "WaitIcon",
+    "style": {
+      "color": {
+        "blue": 16,
+        "red": 195,
+        "green": 135
+      }
+    },
+    "requirement": [],
+    "action": [ {
+      "variable": "corpoplaza_dancers_floordancer_0_activated",
+      "type": "boolean",
+      "helperTitle": "Variable : Set Variable",
+      "name": "set_variable",
+      "comment": "Dismiss Floordancer",
+      "helper": "This action will set a value for a key of a Variable ",
+      "value": false,
+      "key": "state"
+    }, {
+      "variable": "corpoplaza_dancers_poledancer_0_activated",
+      "type": "boolean",
+      "helperTitle": "Variable : Set Variable",
+      "name": "set_variable",
+      "comment": "Dismiss Poledancer",
+      "helper": "This action will set a value for a key of a Variable ",
+      "value": false,
+      "key": "state"
+    }, {
+      "variable": "corpoplaza_dancers_lapdancer_0_activated",
+      "type": "boolean",
+      "helperTitle": "Variable : Set Variable",
+      "name": "set_variable",
+      "comment": "Dismiss Lapdancer",
+      "helper": "This action will set a value for a key of a Variable ",
+      "value": false,
+      "key": "state"
+    }, {
+      "helperTitle": "UI : Display Custom Notification",
+      "type": 1,
+      "helper": "This action will display Custom Notification.  Type : \r\n Undefined = 0,\r\n   Negative = 1,\r\n   Neutral = 2,\r\n   Vehicle = 3,\r\n   Apartment = 4,\r\n   Relic = 5,\r\n   Money = 6,\r\n   Reveal = 7 ",
+      "comment": "Notify user",
+      "value": "All private dancers dismissed! :-(",
+      "duration": 5,
+      "name": "custom_notification"
+    }, {
+      "type": 1,
+      "helper": "This action will fire a subtitle on your bottom portion of the screen, The duration must complete in order for the next action to call. Type value just keep at 1 for now.",
+      "comment": "Speak to player",
+      "target": "player",
+      "speaker": "Receptionist",
+      "name": "subtitle",
+      "helperTitle": "Dialog : run a subtitle",
+      "duration": 3,
+      "title": "Okay, if you're sure! All dancers have been dismissed. They will miss you!"
+    } ]
+  }, {
+    "description": "Changed my mind!",
+    "icon": "TalkIcon",
+    "trigger": [],
+    "requirement": [],
+    "style": {
+      "color": []
+    },
+    "action": [ {
+      "type": 1,
+      "helper": "This action will fire a subtitle on your bottom portion of the screen, The duration must complete in order for the next action to call. Type value just keep at 1 for now.",
+      "comment": "Speak to player",
+      "target": "player",
+      "speaker": "Receptionist",
+      "name": "subtitle",
+      "helperTitle": "Dialog : run a subtitle",
+      "duration": 3,
+      "title": "Yeah, I couldn't dismiss them either!"
+    } ],
+    "context": []
+  } ],
+  "speaker": "Receptionist",
+  "context": [],
+  "desc": "",
+  "trigger": [],
+  "requirement": [],
+  "header": {
+    "version": 3
+  }
+}

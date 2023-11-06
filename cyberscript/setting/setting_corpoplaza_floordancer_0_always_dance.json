@@ -1,0 +1,17 @@
+{
+  "category": "apartmentDancersCorpoPlaza",
+  "type": "toggle",
+  "header": {
+    "version": 1
+  },
+  "variable": {
+    "key": "state",
+    "tag": "corpoplaza_dancers_floordancer_0_setting_always_dance"
+  },
+  "action": [],
+  "label": "Disable Dancer 1 Dance Time Limit",
+  "tag": "setting_corpoplaza_floordancer_0_always_dance",
+  "description": "Once a dance has been activated, it will continue until you choose another dance.",
+  "categorylibelle": "Apartment Dancers (Corpo Plaza)",
+  "defaultvalue": false
+}

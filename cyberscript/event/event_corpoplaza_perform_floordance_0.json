@@ -1,0 +1,233 @@
+{
+  "name": "TV Dance (Floor Dance 1)",
+  "way": "world",
+  "context": [],
+  "tag": "event_corpoplaza_perform_floordance_0",
+  "trigger": {
+    "trigger_dance_floor_0_activated": {
+      "variable": "corpoplaza_dancers_floordancer_0_dance_floor_0_active",
+      "helperTitle": "Score : Custom Variable",
+      "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+      "comment": "Wait for dance to be activated",
+      "operator": "=",
+      "type": "boolean",
+      "value": true,
+      "name": "check_variable",
+      "key": "state"
+    }
+  },
+  "action": [ {
+    "duration": 3,
+    "type": 1,
+    "helper": "This action will fire a subtitle on your bottom portion of the screen, The duration must complete in order for the next action to call. Type value just keep at 1 for now.",
+    "comment": "Speak to player",
+    "speaker": "Sindelicious",
+    "title": "No problem hunny!",
+    "helperTitle": "Dialog : run a subtitle",
+    "name": "subtitle",
+    "target": "player"
+  }, {
+    "name": "set_variable",
+    "variable": "corpoplaza_dancers_floordancer_0_isdancing",
+    "key": "state",
+    "type": "boolean",
+    "comment": "Pause Dancer Idle",
+    "helperTitle": "Variable : Set Variable",
+    "value": true,
+    "helper": "This action will set a value for a key of a Variable "
+  }, {
+    "comment": "Stop current anims",
+    "name": "stop_anim_entity",
+    "tag": "npc_corpoplaza_floordancer_0",
+    "helperTitle": "Anim : Stop Anim for Entity",
+    "helper": "This action will stop animation to entity"
+  }, {
+    "position_way_helper": "normal||behind||forward",
+    "position_poi_district": "",
+    "position_poi_subdistrict": "",
+    "position_poi_from_position": false,
+    "position_poi_type": 1,
+    "position_house_way_helper": "default||enter||exit",
+    "name": "move",
+    "position_spawnlocation": false,
+    "position_poi_is_for_car": false,
+    "position_range": 50,
+    "position_poi_use_location_tag": false,
+    "position_house_way": "default",
+    "position_poi_search": "type|subdistrict|district|tag",
+    "moveV2": true,
+    "distancetolerance": 0,
+    "y": 0,
+    "stoponobstacle": false,
+    "outofway": false,
+    "helperTitle": "Entity : Move To",
+    "helper": "This action will move an entity with several custom parameter ",
+    "comment": "Go to location",
+    "z": 0,
+    "help": "This action will move an entity with several custom parameter ",
+    "pitch": 0,
+    "yaw": 0,
+    "position": "node",
+    "position_poi_searchdistance": "near|far|random",
+    "ignorenavigation": true,
+    "x": 0,
+    "position_way": "normal",
+    "position_change_helper": "Write 'current' in position_tag for get current node,mappin, fasttravel, custom_place or custom_room. \n For poi if you write 'current' in position_poi_district you will get the current district, \n if you write 'current in position_poi_subdistrict you will get the current subdistrict. \n also if you write 'random' in position_poi_subdistrict or position_poi_district, you will get an 'random' value",
+    "position_tag": "node_corpoplaza_dance_floor_0",
+    "tag": "npc_corpoplaza_floordancer_0",
+    "position_distance": 5,
+    "position_helper": "at||relative_to_entity||node||player_look_at||poi||mappin||fasttravel||custom_place||custom_room",
+    "roll": 0,
+    "position_house_tag": "playerhouse01",
+    "move": "Walk",
+    "group": false,
+    "distance": 0,
+    "position_node_usegameplay": false,
+    "position_lookatdistance": 0,
+    "position_tag_helper": "judy01||playerhouse01||playerhouse_bed||"
+  }, {
+    "comment": "Wait until at node",
+    "help": "Wait that trigger condition is valid",
+    "name": "wait_for_trigger",
+    "trigger": {
+      "position_way_helper": "normal||behind||forward",
+      "position_poi_district": "",
+      "position_poi_subdistrict": "",
+      "position_poi_from_position": false,
+      "position_poi_type": 1,
+      "position_house_way_helper": "default||enter||exit",
+      "name": "entity_at_position",
+      "position_spawnlocation": false,
+      "position_poi_is_for_car": false,
+      "position_range": 50,
+      "position_poi_use_location_tag": false,
+      "position_house_way": "default",
+      "position_poi_search": "type|subdistrict|district|tag",
+      "position_poi_searchdistance": "near|far|random",
+      "x": 0,
+      "y": 0,
+      "helperTitle": "Entity : At position",
+      "helper": "This trigger will be triggered when a custom entity is at position",
+      "z": 0,
+      "distance": 0,
+      "range": 0.0099999997764826,
+      "position_tag": "node_corpoplaza_dance_floor_0",
+      "position_way": "normal",
+      "position_distance": 5,
+      "position_helper": "at||relative_to_entity||node||player_look_at||poi||mappin||fasttravel||custom_place||custom_room",
+      "tag": "npc_corpoplaza_floordancer_0",
+      "position_house_tag": "playerhouse01",
+      "position": "node",
+      "group": false,
+      "position_change_helper": "Write 'current' in position_tag for get current node,mappin, fasttravel, custom_place or custom_room. \n For poi if you write 'current' in position_poi_district you will get the current district, \n if you write 'current in position_poi_subdistrict you will get the current subdistrict. \n also if you write 'random' in position_poi_subdistrict or position_poi_district, you will get an 'random' value",
+      "position_node_usegameplay": false,
+      "position_lookatdistance": 0,
+      "position_tag_helper": "judy01||playerhouse01||playerhouse_bed||"
+    },
+    "helperTitle": "Logic : Wait For Trigger",
+    "helper": "This action will wait that the trigger is valid before do the next action "
+  }, {
+    "comment": "Get ya boogie on an dance!",
+    "helperTitle": "Anim : Play Anim to Entity",
+    "anim": "kneel__lk_on_ground__01__sexy_dance__01",
+    "tag": "npc_corpoplaza_floordancer_0",
+    "ent": "base\\cyberscript\\entity\\workspot_anim.ent",
+    "helper": "This action will apply animation to entity",
+    "name": "play_custom_anim_entity",
+    "workspot": "cyberscript_workspot_base",
+    "unlockcamera": true,
+    "angle": true,
+    "pitch": 0,
+    "yaw": 90,
+    "roll": 0,
+    "isinstant": false
+  }, {
+    "name": "wait_for_trigger",
+    "requirement": [ [ "trigger_setting_floordancer_0_always_dance" ] ],
+    "comment": "Wait for an interrupt if always dance is activated",
+    "help": "Wait that trigger condition is valid",
+    "helper": "This action will wait that the trigger is valid before do the next action ",
+    "trigger": {
+      "name": "check_variable",
+      "variable": "corpoplaza_dancers_floordancer_0_interrupt_stop_dance",
+      "operator": "=",
+      "key": "state",
+      "type": "boolean",
+      "value": true,
+      "helperTitle": "Score : Custom Variable",
+      "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty"
+    },
+    "helperTitle": "Logic : Wait For Trigger",
+    "triggers": {
+      "trigger_setting_floordancer_0_always_dance": {
+        "variable": "corpoplaza_dancers_floordancer_0_setting_always_dance",
+        "type": "boolean",
+        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+        "name": "check_variable",
+        "operator": "=",
+        "value": true,
+        "helperTitle": "Score : Custom Variable",
+        "comment": "",
+        "key": "state"
+      }
+    }
+  }, {
+    "name": "set_variable",
+    "variable": "corpoplaza_dancers_floordancer_0_interrupt_stop_dance",
+    "key": "state",
+    "helperTitle": "Variable : Set Variable",
+    "value": false,
+    "comment": "Reset interrupt",
+    "type": "boolean",
+    "helper": "This action will set a value for a key of a Variable "
+  }, {
+    "name": "wait_second",
+    "requirement": [ [ "trigger_floordancer_0_setting_always_dance_off" ] ],
+    "value": 120,
+    "help": "Wait x second",
+    "comment": "Dance for a minute",
+    "helper": "This action will wait x second before perform the next action",
+    "helperTitle": "Logic : Wait X seconds",
+    "triggers": {
+      "trigger_floordancer_0_setting_always_dance_off": {
+        "variable": "corpoplaza_dancers_floordancer_0_setting_always_dance",
+        "type": "boolean",
+        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+        "name": "check_variable",
+        "operator": "=",
+        "value": false,
+        "helperTitle": "Score : Custom Variable",
+        "comment": "",
+        "key": "state"
+      }
+    }
+  }, {
+    "comment": "Stop anim",
+    "name": "stop_anim_entity",
+    "tag": "npc_corpoplaza_floordancer_0",
+    "helperTitle": "Anim : Stop Anim for Entity",
+    "helper": "This action will stop animation to entity"
+  }, {
+    "name": "set_variable",
+    "variable": "corpoplaza_dancers_floordancer_0_dance_floor_0_active",
+    "key": "state",
+    "type": "boolean",
+    "comment": "Finish Dancing",
+    "helperTitle": "Variable : Set Variable",
+    "value": false,
+    "helper": "This action will set a value for a key of a Variable "
+  }, {
+    "name": "set_variable",
+    "variable": "corpoplaza_dancers_floordancer_0_isdancing",
+    "key": "state",
+    "type": "boolean",
+    "comment": "Resume Dancer Idle",
+    "helperTitle": "Variable : Set Variable",
+    "value": false,
+    "helper": "This action will set a value for a key of a Variable "
+  } ],
+  "header": {
+    "version": 1
+  },
+  "requirement": [ [ "trigger_dance_floor_0_activated" ] ]
+}

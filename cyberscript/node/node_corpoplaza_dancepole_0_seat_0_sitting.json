@@ -1,0 +1,14 @@
+{
+  "x": -1611.1319580078,
+  "y": 353.95700073242,
+  "tag": "node_corpoplaza_dancepole_0_seat_0_sitting",
+  "name": "Sitting at poledance",
+  "header": {
+    "version": 2
+  },
+  "z": 49.200000762939,
+  "gameplay_y": 353.95700073242,
+  "gameplay_z": 49.200000762939,
+  "sort": "corpoApartment",
+  "gameplay_x": -1611.1319580078
+}

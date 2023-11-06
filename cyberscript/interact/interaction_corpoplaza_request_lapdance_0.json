@@ -1,0 +1,133 @@
+{
+  "icon": "ProstituteIcon",
+  "sorttag": "none",
+  "timer": 0,
+  "action": [ {
+    "title": "Take a seat hun!",
+    "target": "npc_corpoplaza_lapdancer_0",
+    "helperTitle": "Dialog : run a subtitle",
+    "helper": "This action will fire a subtitle on your bottom portion of the screen, The duration must complete in order for the next action to call. Type value just keep at 1 for now.",
+    "type": 1,
+    "speaker": "Destiny",
+    "name": "subtitle",
+    "duration": 3,
+    "fail_action": [ {
+      "helperTitle": "UI : Display Custom Notification",
+      "helper": "This action will display Custom Notification.  Type : \r\n Undefined = 0,\r\n   Negative = 1,\r\n   Neutral = 2,\r\n   Vehicle = 3,\r\n   Apartment = 4,\r\n   Relic = 5,\r\n   Money = 6,\r\n   Reveal = 7 ",
+      "type": 2,
+      "value": "Sit to begin lap dance!",
+      "duration": 5,
+      "name": "custom_notification"
+    } ],
+    "comment": "Speak to player"
+  }, {
+    "helperTitle": "Logic : Wait For Trigger",
+    "name": "wait_for_trigger",
+    "comment": "Wait for player to sit",
+    "help": "Wait that trigger condition is valid",
+    "helper": "This action will wait that the trigger is valid before do the next action ",
+    "trigger": {
+      "helperTitle": "Map : Position XYZ",
+      "helper": "This trigger will be triggered when you are at this XYZ position (in the range)",
+      "range": 0.10000000149012,
+      "y": 356.44592285156,
+      "x": -1601.7165527344,
+      "name": "3Dposition",
+      "z": 48.621650695801
+    }
+  }, {
+    "helperTitle": "Variable : Set Variable",
+    "name": "set_variable",
+    "type": "boolean",
+    "variable": "corpoplaza_dancers_lapdancer_0_dance_lap_0_active",
+    "value": false,
+    "helper": "This action will set a value for a key of a Variable ",
+    "key": "state"
+  }, {
+    "helperTitle": "Variable : Set Variable",
+    "name": "set_variable",
+    "type": "boolean",
+    "variable": "corpoplaza_dancers_lapdancer_0_dance_lap_0_requested",
+    "value": true,
+    "helper": "This action will set a value for a key of a Variable ",
+    "key": "state"
+  }, {
+    "helperTitle": "Logic : Wait For Trigger",
+    "name": "wait_for_trigger",
+    "comment": "Wait for player to stand",
+    "help": "Wait that trigger condition is valid",
+    "helper": "This action will wait that the trigger is valid before do the next action ",
+    "trigger": {
+      "helperTitle": "Map : Position XYZ",
+      "name": "3Dposition",
+      "range": 0.10000000149012,
+      "y": 356.96115112305,
+      "helper": "This trigger will be triggered when you are at this XYZ position (in the range)",
+      "comment": "",
+      "z": 48.627174377441,
+      "x": -1602.0017089844
+    }
+  }, {
+    "helperTitle": "Variable : Set Variable",
+    "name": "set_variable",
+    "comment": "End dance",
+    "helper": "This action will set a value for a key of a Variable ",
+    "type": "boolean",
+    "value": true,
+    "variable": "corpoplaza_dancers_lapdancer_0_dance_lap_0_end",
+    "key": "state"
+  } ],
+  "type": "interact",
+  "hold": true,
+  "input": 2,
+  "header": {
+    "version": 1
+  },
+  "group": "corpoApartmentStrippers",
+  "tag": "interaction_corpoplaza_request_lapdance_0",
+  "context": [],
+  "name": "Ask for Lapdance",
+  "trigger": {
+    "trigger_player_location": {
+      "helperTitle": "3Dposition",
+      "helper": "3Dposition",
+      "range": 2,
+      "y": 356.71600341797,
+      "x": -1602.3337402344,
+      "name": "3Dposition",
+      "z": 48.627174377441,
+      "comment": "Check player location"
+    },
+    "trigger_lapdancer_0_activated": {
+      "value": true,
+      "helperTitle": "Score : Custom Variable",
+      "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+      "comment": "Check if dancer is activated",
+      "key": "state",
+      "name": "check_variable",
+      "variable": "corpoplaza_dancers_lapdancer_0_activated",
+      "type": "boolean",
+      "operator": "="
+    }
+  },
+  "requirement": [ [ "trigger_lapdancer_0_activated", "trigger_player_location" ] ],
+  "style": {
+    "textcolor": {
+      "blue": 255,
+      "green": 255,
+      "red": 255
+    },
+    "bgcolor": {
+      "blue": 0,
+      "green": 0,
+      "red": 65
+    },
+    "iconcolor": {
+      "blue": 255,
+      "green": 255,
+      "red": 255
+    }
+  },
+  "display": "event_interact",
+  "key": "QuickMelee"
+}

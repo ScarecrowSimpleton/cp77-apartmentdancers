@@ -1,0 +1,90 @@
+{
+  "trigger": [],
+  "tag": "choice_corpoplaza_poledance_selection_0",
+  "options": [ {
+    "trigger": [],
+    "description": "Request Dance 1",
+    "context": [],
+    "requirement": [],
+    "style": {
+      "color": []
+    },
+    "action": [ {
+      "workspot": "cyberscript_workspot_base",
+      "tag": "npc_corpoplaza_poledancer_0",
+      "isinstant": false,
+      "anim": "stand_pole_dance__rh_on_pole__01__dance_high__01",
+      "comment": "Perform dance",
+      "ent": "base\\cyberscript\\entity\\workspot_anim.ent",
+      "unlockcamera": true,
+      "helperTitle": "Anim : Play Anim to Entity",
+      "name": "play_custom_anim_entity",
+      "pitch": 0,
+      "yaw": 90,
+      "roll": 0,
+      "angle": true,
+      "helper": "This action will apply animation to entity",
+      "context": []
+    } ],
+    "icon": "ProstituteIcon"
+  }, {
+    "action": [ {
+      "workspot": "cyberscript_workspot_base",
+      "tag": "npc_corpoplaza_poledancer_0",
+      "isinstant": false,
+      "anim": "stand_pole_dance__rh_on_pole__01__dance_high__02",
+      "comment": "Perform dance",
+      "ent": "base\\cyberscript\\entity\\workspot_anim.ent",
+      "unlockcamera": true,
+      "helperTitle": "Anim : Play Anim to Entity",
+      "name": "play_custom_anim_entity",
+      "pitch": 0,
+      "yaw": 90,
+      "roll": 0,
+      "angle": true,
+      "helper": "This action will apply animation to entity",
+      "context": []
+    } ],
+    "description": "Request Dance 2",
+    "context": [],
+    "requirement": [],
+    "style": {
+      "color": []
+    },
+    "trigger": [],
+    "icon": "ProstituteIcon"
+  }, {
+    "trigger": [],
+    "description": "Request Dance 3",
+    "context": [],
+    "requirement": [],
+    "style": {
+      "color": []
+    },
+    "action": [ {
+      "workspot": "cyberscript_workspot_base",
+      "tag": "npc_corpoplaza_poledancer_0",
+      "isinstant": false,
+      "anim": "stand_pole_dance__rh_on_pole__01__dance_high__03",
+      "comment": "Perform dance",
+      "ent": "base\\cyberscript\\entity\\workspot_anim.ent",
+      "unlockcamera": true,
+      "helperTitle": "Anim : Play Anim to Entity",
+      "name": "play_custom_anim_entity",
+      "pitch": 0,
+      "yaw": 90,
+      "roll": 0,
+      "angle": true,
+      "helper": "This action will apply animation to entity",
+      "context": []
+    } ],
+    "icon": "ProstituteIcon"
+  } ],
+  "context": [],
+  "desc": "",
+  "header": {
+    "version": 3
+  },
+  "speaker": "Bambi",
+  "requirement": []
+}

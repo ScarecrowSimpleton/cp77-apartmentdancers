@@ -1,0 +1,9 @@
+{
+  "name": "corpoApartmentDancers",
+  "desc": "Adds dancing services to your Corpo Plaza apartment.",
+  "author": "ScarecrowSimpleton",
+  "file": "corpoApartmentDancers.zip",
+  "tag": "corpoApartmentDancers",
+  "version": "1.0.0",
+  "flags": [ "compile" ],
+}

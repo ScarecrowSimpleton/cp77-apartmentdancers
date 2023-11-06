@@ -1,0 +1,17 @@
+{
+  "category": "apartmentDancersCorpoPlaza",
+  "type": "toggle",
+  "header": {
+    "version": 1
+  },
+  "variable": {
+    "key": "state",
+    "tag": "corpoplaza_dancers_floordancer_0_setting_routine"
+  },
+  "action": [],
+  "label": "Activate Dancer 1 Routine",
+  "tag": "setting_corpoplaza_floordancer_0_routine",
+  "description": "Enables or disables the routine movement of Dancer 1",
+  "categorylibelle": "Apartment Dancers (Corpo Plaza)",
+  "defaultvalue": true
+}

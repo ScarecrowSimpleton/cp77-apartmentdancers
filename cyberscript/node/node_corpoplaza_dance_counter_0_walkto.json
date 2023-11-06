@@ -1,0 +1,14 @@
+{
+  "header": {
+    "version": 2
+  },
+  "sort": "danceLocations",
+  "x": -1607.9702148438,
+  "y": 350.11111450195,
+  "gameplay_x": -1607.9702148438,
+  "gameplay_y": 350.11111450195,
+  "gameplay_z": 49.400001525879,
+  "name": "Walkable location",
+  "z": 49.400001525879,
+  "tag": "node_corpoplaza_dance_counter_0_walkto"
+}

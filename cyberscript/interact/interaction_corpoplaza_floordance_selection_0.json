@@ -1,0 +1,74 @@
+{
+  "name": "Instruct Sindelicious",
+  "header": {
+    "version": 1
+  },
+  "timer": 0,
+  "group": "corpoApartmentStrippers",
+  "tag": "interaction_corpoplaza_floordance_selection_0",
+  "context": [],
+  "key": "QuickMelee",
+  "trigger": {
+    "trigger_player_location": {
+      "helper": "3Dposition",
+      "comment": "Check player location",
+      "name": "3Dposition",
+      "x": -1607.3037109375,
+      "z": 49.200004577637,
+      "range": 25,
+      "y": 357.45159912109,
+      "helperTitle": "3Dposition"
+    },
+    "trigger_floordancer_0_activated": {
+      "key": "state",
+      "operator": "=",
+      "variable": "corpoplaza_dancers_floordancer_0_activated",
+      "type": "boolean",
+      "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+      "comment": "Check if dancer is activated",
+      "value": true,
+      "helperTitle": "Score : Custom Variable",
+      "name": "check_variable"
+    }
+  },
+  "style": {
+    "textcolor": {
+      "blue": 255,
+      "green": 255,
+      "red": 255
+    },
+    "bgcolor": {
+      "blue": 255,
+      "green": 255,
+      "red": 255
+    },
+    "iconcolor": {
+      "blue": 255,
+      "green": 255,
+      "red": 255
+    }
+  },
+  "sorttag": "none",
+  "type": "interact",
+  "input": 1,
+  "display": "event_interact",
+  "action": [ {
+    "helper": "This action will set a value for a key of a Variable ",
+    "comment": "Stop existing dances",
+    "name": "set_variable",
+    "helperTitle": "Variable : Set Variable",
+    "variable": "corpoplaza_dancers_floordancer_0_interrupt_stop_dance",
+    "key": "state",
+    "value": true,
+    "type": "boolean"
+  }, {
+    "dialog": "choice_corpoplaza_floordance_selection_0",
+    "comment": "Show dance options",
+    "name": "dialog",
+    "helper": "This action will fire a dialog if the trigger requirements are met",
+    "helperTitle": "Dialog : run a dialog"
+  } ],
+  "hold": true,
+  "requirement": [ [ "trigger_player_location", "trigger_floordancer_0_activated" ] ],
+  "icon": "GiveTakeIcon"
+}

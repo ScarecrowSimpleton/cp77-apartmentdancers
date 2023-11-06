@@ -1,0 +1,76 @@
+{
+  "header": {
+    "version": 1
+  },
+  "display": "event_interact",
+  "timer": 0,
+  "tag": "interaction_corpoplaza_poledance_selection_0",
+  "type": "interact",
+  "input": 2,
+  "trigger": {
+    "trigger_poledancer_0_activated": {
+      "variable": "corpoplaza_dancers_poledancer_0_activated",
+      "helperTitle": "Score : Custom Variable",
+      "value": true,
+      "comment": "Check if dancer is activated",
+      "operator": "=",
+      "key": "state",
+      "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+      "type": "boolean",
+      "name": "check_variable"
+    },
+    "trigger_player_location": {
+      "y": 355.08898925781,
+      "name": "3Dposition",
+      "x": -1611.2530517578,
+      "z": 49.200000762939,
+      "helperTitle": "3Dposition",
+      "helper": "3Dposition",
+      "comment": "Check player location",
+      "range": 3
+    }
+  },
+  "context": [],
+  "sorttag": "none",
+  "name": "Request Dance",
+  "action": [ {
+    "name": "subtitle",
+    "helperTitle": "Dialog : run a subtitle",
+    "helper": "This action will fire a subtitle on your bottom portion of the screen, The duration must complete in order for the next action to call. Type value just keep at 1 for now.",
+    "comment": "Speak to player",
+    "type": 1,
+    "title": "Sure thing sweetie! Which dance would you like?",
+    "duration": 3,
+    "target": "player",
+    "speaker": "Bambi"
+  }, {
+    "name": "dialog",
+    "dialog": "choice_corpoplaza_poledance_selection_0",
+    "context": [],
+    "helperTitle": "Dialog : run a dialog",
+    "helper": "This action will fire a dialog if the trigger requirements are met",
+    "comment": "Show dance options"
+  } ],
+  "style": {
+    "bgcolor": {
+      "blue": 14,
+      "green": 14,
+      "red": 79
+    },
+    "iconcolor": {
+      "blue": 255,
+      "green": 255,
+      "red": 255
+    },
+    "textcolor": {
+      "blue": 255,
+      "green": 255,
+      "red": 255
+    }
+  },
+  "key": "QuickMelee",
+  "hold": true,
+  "icon": "ProstituteIcon",
+  "group": "corpoApartmentStrippers",
+  "requirement": [ [ "trigger_poledancer_0_activated", "trigger_player_location" ] ]
+}

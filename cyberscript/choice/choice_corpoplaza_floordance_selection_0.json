@@ -1,0 +1,50 @@
+{
+  "speaker": "Sindelicious",
+  "desc": "",
+  "trigger": [],
+  "requirement": [],
+  "context": [],
+  "tag": "choice_corpoplaza_floordance_selection_0",
+  "options": [ {
+    "action": [ {
+      "comment": "Perform Dance",
+      "type": "boolean",
+      "variable": "corpoplaza_dancers_floordancer_0_dance_floor_0_active",
+      "key": "state",
+      "value": true,
+      "helperTitle": "Variable : Set Variable",
+      "helper": "This action will set a value for a key of a Variable ",
+      "name": "set_variable"
+    } ],
+    "trigger": [],
+    "requirement": [],
+    "context": [],
+    "style": {
+      "color": []
+    },
+    "description": "TV Dance",
+    "icon": "ProstituteIcon"
+  }, {
+    "requirement": [],
+    "trigger": [],
+    "action": [ {
+      "name": "set_variable",
+      "type": "boolean",
+      "value": true,
+      "key": "state",
+      "variable": "corpoplaza_dancers_floordancer_0_dance_counter_0_active",
+      "helperTitle": "Variable : Set Variable",
+      "helper": "This action will set a value for a key of a Variable ",
+      "comment": "Perform Dance"
+    } ],
+    "context": [],
+    "description": "Kitchen Counter Dance",
+    "style": {
+      "color": []
+    },
+    "icon": "ProstituteIcon"
+  } ],
+  "header": {
+    "version": 3
+  }
+}

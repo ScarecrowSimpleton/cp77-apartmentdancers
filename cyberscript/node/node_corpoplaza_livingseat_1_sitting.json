@@ -1,0 +1,14 @@
+{
+  "y": 357.28799438477,
+  "header": {
+    "version": 2
+  },
+  "name": "Sitting in corpo seat",
+  "z": 48.619998931885,
+  "x": -1603.3929443359,
+  "sort": "corpoApartment",
+  "gameplay_x": -1603.3929443359,
+  "gameplay_y": 357.28799438477,
+  "gameplay_z": 48.619998931885,
+  "tag": "node_corpoplaza_livingseat_1_sitting"
+}

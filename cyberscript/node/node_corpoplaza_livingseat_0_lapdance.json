@@ -1,0 +1,15 @@
+{
+  "y": 357.28799438477,
+  "header": {
+    "version": 2
+  },
+  "name": "Living Area Seat 0 Lapdance",
+  "x": -1601.5140380859,
+  "y": 356.66198730469,
+  "z": 48.953998565674,
+  "gameplay_x": -1601.5140380859,
+  "gameplay_y": 356.66198730469,
+  "gameplay_z": 48.953998565674,
+  "sort": "corpoApartment",
+  "tag": "node_corpoplaza_livingseat_0_lapdance"
+}

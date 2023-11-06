@@ -1,0 +1,15 @@
+{
+  "y": 357.71173095703,
+  "header": {
+    "version": 2
+  },
+  "name": "Living Area Seat 0",
+  "x": -1602.4549560547,
+  "y": 355.92401123047,
+  "z": 48.622001647949,
+  "gameplay_x": -1602.4549560547,
+  "gameplay_y": 355.92401123047,
+  "gameplay_z": 48.622001647949,
+  "sort": "corpoApartment",
+  "tag": "node_corpoplaza_livingseat_0"
+}

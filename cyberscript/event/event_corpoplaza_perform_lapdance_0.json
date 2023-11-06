@@ -1,0 +1,120 @@
+{
+  "way": "world",
+  "trigger": {
+    "trigger_lapdance_active": {
+      "variable": "corpoplaza_dancers_lapdancer_0_dance_lap_0_active",
+      "operator": "=",
+      "key": "state",
+      "helperTitle": "Score : Custom Variable",
+      "type": "boolean",
+      "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+      "value": false,
+      "name": "check_variable"
+    },
+    "trigger_lapdance_requested": {
+      "variable": "corpoplaza_dancers_lapdancer_0_dance_lap_0_requested",
+      "operator": "=",
+      "key": "state",
+      "helperTitle": "Score : Custom Variable",
+      "type": "boolean",
+      "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+      "value": true,
+      "name": "check_variable"
+    }
+  },
+  "requirement": [ [ "trigger_lapdance_active", "trigger_lapdance_requested" ] ],
+  "tag": "event_corpoplaza_perform_lapdance_0",
+  "action": [ {
+    "helperTitle": "Anim : Stop Anim for Entity",
+    "helper": "This action will stop animation to entity",
+    "comment": "Stop current anims",
+    "tag": "npc_corpoplaza_lapdancer_0",
+    "name": "stop_anim_entity"
+  }, {
+    "variable": "corpoplaza_dancers_lapdancer_0_dance_lap_0_requested",
+    "type": "boolean",
+    "helperTitle": "Variable : Set Variable",
+    "helper": "This action will set a value for a key of a Variable ",
+    "value": false,
+    "key": "state",
+    "name": "set_variable"
+  }, {
+    "variable": "corpoplaza_dancers_lapdancer_0_dance_lap_0_active",
+    "helper": "This action will set a value for a key of a Variable ",
+    "helperTitle": "Variable : Set Variable",
+    "type": "boolean",
+    "value": true,
+    "key": "state",
+    "name": "set_variable"
+  }, {
+    "help": "Wait x ticks",
+    "helperTitle": "Logic : Wait X ticks",
+    "helper": "This action will wait x ticks. before perform the next action (60 ticks = 1 sec approx)",
+    "value": 10,
+    "name": "wait_tick"
+  }, {
+    "roll": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "position_tag": "node_corpoplaza_livingseat_0_lapdance",
+    "position_way": "normal",
+    "position_distance": 5,
+    "position_helper": "at||relative_to_entity||node||player_look_at||poi||mappin||fasttravel||custom_place||custom_room",
+    "position_house_tag": "playerhouse01",
+    "position_change_helper": "Write 'current' in position_tag for get current node,mappin, fasttravel, custom_place or custom_room. \n For poi if you write 'current' in position_poi_district you will get the current district, \n if you write 'current in position_poi_subdistrict you will get the current subdistrict. \n also if you write 'random' in position_poi_subdistrict or position_poi_district, you will get an 'random' value",
+    "position_node_usegameplay": false,
+    "position_lookatdistance": 0,
+    "position_tag_helper": "judy01||playerhouse01||playerhouse_bed||",
+    "comment": "Get on player",
+    "position_way_helper": "normal||behind||forward",
+    "name": "teleport",
+    "help": "This action will teleport an entity with several custom parameter ",
+    "position_poi_subdistrict": "",
+    "position_poi_from_position": false,
+    "position_poi_type": 1,
+    "position_house_way_helper": "default||enter||exit",
+    "position_spawnlocation": false,
+    "position": "node",
+    "position_range": 50,
+    "position_poi_use_location_tag": false,
+    "position_house_way": "default",
+    "position_poi_search": "type|subdistrict|district|tag",
+    "distance": 0,
+    "position_poi_searchdistance": "near|far|random",
+    "z": 0,
+    "tag": "npc_corpoplaza_lapdancer_0",
+    "x": 0,
+    "y": 0,
+    "position_poi_is_for_car": false,
+    "group": false,
+    "position_poi_district": "",
+    "helper": "This action will teleport an entity with several custom parameter ",
+    "helperTitle": "Entity : Teleport To"
+  }, {
+    "help": "Wait x ticks",
+    "helperTitle": "Logic : Wait X ticks",
+    "helper": "This action will wait x ticks. before perform the next action (60 ticks = 1 sec approx)",
+    "value": 4,
+    "name": "wait_tick"
+  }, {
+    "pitch": 0,
+    "helperTitle": "Anim : Play Anim to Entity",
+    "helper": "This action will apply animation to entity",
+    "ent": "base\\cyberscript\\entity\\workspot_anim.ent",
+    "workspot": "cyberscript_workspot_base",
+    "name": "play_custom_anim_entity",
+    "yaw": 180,
+    "tag": "npc_corpoplaza_lapdancer_0",
+    "angle": true,
+    "unlockcamera": true,
+    "isinstant": true,
+    "comment": "Work it girl!",
+    "anim": "dirt__sit_chair__2h_on_lap__02__sexy_dance__01",
+    "roll": 0
+  } ],
+  "context": [],
+  "header": {
+    "version": 1
+  },
+  "name": "Perform Lapdance 1"
+}
