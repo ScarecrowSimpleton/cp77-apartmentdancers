@@ -1,16 +1,30 @@
 {
-  "trigger": [],
-  "desc": "",
   "context": [],
   "tag": "choice_corpoplaza_roomservice_0",
-  "header": {
-    "version": 3
-  },
-  "speaker": "Receptionist",
-  "requirement": [],
   "options": [ {
-    "icon": "PayIcon",
     "context": [],
+    "icon": "PayIcon",
+    "trigger": {
+      "trigger_floordancer_0_inactive": {
+        "key": "state",
+        "name": "check_variable",
+        "variable": "corpoplaza_dancers_floordancer_0_activated",
+        "value": false,
+        "operator": "=",
+        "type": "boolean",
+        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+        "comment": "Check if dancer is inactive",
+        "helperTitle": "Score : Custom Variable"
+      },
+      "trigger_player_has_funds_5000": {
+        "value": 5000,
+        "name": "money",
+        "helper": "This trigger will be triggered when you has enough money",
+        "comment": "Verify player has the funds available",
+        "helperTitle": "Money : has enough"
+      }
+    },
+    "requirement": [ [ "trigger_floordancer_0_inactive", "trigger_player_has_funds_5000" ] ],
     "description": "5000 Hire Private Dancer",
     "style": {
       "color": {
@@ -19,321 +33,261 @@
         "green": 135
       }
     },
-    "trigger": {
-      "trigger_floordancer_0_inactive": {
-        "operator": "=",
-        "type": "boolean",
-        "helperTitle": "Score : Custom Variable",
-        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
-        "comment": "Check if dancer is inactive",
-        "key": "state",
-        "name": "check_variable",
-        "variable": "corpoplaza_dancers_floordancer_0_activated",
-        "value": false
-      },
-      "trigger_player_has_funds_5000": {
-        "name": "money",
-        "value": 5000,
-        "helperTitle": "Money : has enough",
-        "helper": "This trigger will be triggered when you has enough money",
-        "comment": "Verify player has the funds available"
-      }
-    },
-    "requirement": [ [ "trigger_floordancer_0_inactive", "trigger_player_has_funds_5000" ] ],
     "action": [ {
-      "type": "boolean",
+      "helperTitle": "Variable : Set Variable",
       "value": true,
-      "helper": "This action will set a value for a key of a Variable ",
-      "comment": "Enable routine if user has never set it.",
-      "key": "state",
-      "name": "set_variable",
-      "variable": "corpoplaza_dancers_floordancer_0_setting_routine",
-      "helperTitle": "Variable : Set Variable",
-      "requirement": [ [ "trigger_check_routine_setting" ] ],
-      "triggers": {
-        "trigger_check_routine_setting": {
-          "operator": "empty",
-          "type": "boolean",
-          "variable": "corpoplaza_dancers_floordancer_0_setting_routine",
-          "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
-          "comment": "",
-          "key": "state",
-          "name": "check_variable",
-          "helperTitle": "Score : Custom Variable",
-          "value": false
-        }
-      }
-    }, {
-      "type": "boolean",
-      "value": false,
-      "helper": "This action will set a value for a key of a Variable ",
-      "comment": "Disable always dance if user has never set it.",
-      "key": "state",
-      "name": "set_variable",
-      "variable": "corpoplaza_dancers_floordancer_0_setting_routine",
-      "helperTitle": "Variable : Set Variable",
-      "requirement": [ [ "trigger_check_always_dance_setting" ] ],
-      "triggers": {
-        "trigger_check_always_dance_setting": {
-          "operator": "empty",
-          "type": "boolean",
-          "variable": "corpoplaza_dancers_floordancer_0_setting_always_dance",
-          "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
-          "comment": "",
-          "key": "state",
-          "name": "check_variable",
-          "helperTitle": "Score : Custom Variable",
-          "value": false
-        }
-      }
-    }, {
       "key": "state",
       "variable": "corpoplaza_dancers_floordancer_0_activated",
       "type": "boolean",
-      "name": "set_variable",
-      "helperTitle": "Variable : Set Variable",
-      "value": true,
       "helper": "This action will set a value for a key of a Variable ",
-      "comment": "Set activation variable"
+      "comment": "Set activation variable",
+      "name": "set_variable"
     }, {
-      "name": "remove_money",
-      "helperTitle": "Money : Remove Money",
       "value": 5000,
+      "name": "remove_money",
       "helper": "This action will make remove a amount of money",
-      "comment": "Deduct rental fee"
+      "comment": "Deduct rental fee",
+      "helperTitle": "Money : Remove Money"
     }, {
+      "value": "Private dancer hired for apartment!",
+      "name": "custom_notification",
       "duration": 5,
       "type": 4,
-      "name": "custom_notification",
-      "helperTitle": "UI : Display Custom Notification",
-      "value": "Private dancer hired for apartment!",
       "helper": "This action will display Custom Notification.  Type : \r\n Undefined = 0,\r\n   Negative = 1,\r\n   Neutral = 2,\r\n   Vehicle = 3,\r\n   Apartment = 4,\r\n   Relic = 5,\r\n   Money = 6,\r\n   Reveal = 7 ",
-      "comment": "Display notification (needed: subtitles sometimes don't fire)"
+      "comment": "Display notification (needed: subtitles sometimes don't fire)",
+      "helperTitle": "UI : Display Custom Notification"
     }, {
-      "type": 1,
+      "target": "player",
+      "name": "subtitle",
+      "duration": 3,
       "speaker": "Receptionist",
+      "title": "Sindelicious has been allocated to you, she awaits you in your apartment!",
       "helperTitle": "Dialog : run a subtitle",
       "helper": "This action will fire a subtitle on your bottom portion of the screen, The duration must complete in order for the next action to call. Type value just keep at 1 for now.",
-      "comment": "Speak to da player",
-      "duration": 3,
-      "name": "subtitle",
-      "title": "Sindelicious has been allocated to you, she awaits you in your apartment!",
-      "target": "player"
+      "comment": "Speak to the player",
+      "type": 1
     } ]
   }, {
-    "icon": "PayIcon",
     "context": [],
+    "icon": "PayIcon",
+    "action": [ {
+      "type": "boolean",
+      "value": true,
+      "key": "state",
+      "comment": "Set activation variable",
+      "name": "set_variable",
+      "helper": "This action will set a value for a key of a Variable ",
+      "variable": "corpoplaza_dancers_poledancer_0_activated",
+      "helperTitle": "Variable : Set Variable"
+    }, {
+      "value": 10000,
+      "name": "remove_money",
+      "helper": "This action will make remove a amount of money",
+      "comment": "Deduct rental fee",
+      "helperTitle": "Money : Remove Money"
+    }, {
+      "value": "Private pole dancer hired for apartment!",
+      "type": 4,
+      "comment": "Show notification (needed: subtitles don't always work)",
+      "helperTitle": "UI : Display Custom Notification",
+      "helper": "This action will display Custom Notification.  Type : \r\n Undefined = 0,\r\n   Negative = 1,\r\n   Neutral = 2,\r\n   Vehicle = 3,\r\n   Apartment = 4,\r\n   Relic = 5,\r\n   Money = 6,\r\n   Reveal = 7 ",
+      "duration": 5,
+      "name": "custom_notification"
+    }, {
+      "target": "player",
+      "name": "subtitle",
+      "duration": 3,
+      "speaker": "Receptionist",
+      "title": "Bambi has been allocated to you, she awaits you in your apartment!",
+      "helperTitle": "Dialog : run a subtitle",
+      "helper": "This action will fire a subtitle on your bottom portion of the screen, The duration must complete in order for the next action to call. Type value just keep at 1 for now.",
+      "comment": "Speak to player",
+      "type": 1
+    } ],
     "description": "10000 Hire Private Poledancer",
     "style": {
       "color": {
         "blue": 16,
-        "green": 135,
-        "red": 195
-      }
-    },
-    "trigger": {
-      "trigger_poledancer_0_inactive": {
-        "operator": "=",
-        "type": "boolean",
-        "value": false,
-        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
-        "comment": "Check if poledancer 0 is inactive",
-        "key": "state",
-        "name": "check_variable",
-        "helperTitle": "Score : Custom Variable",
-        "variable": "corpoplaza_dancers_poledancer_0_activated"
-      },
-      "trigger_player_has_funds_10000": {
-        "name": "money",
-        "value": 10000,
-        "helperTitle": "Money : has enough",
-        "helper": "This trigger will be triggered when you has enough money",
-        "comment": "Verify player has the funds available"
+        "red": 195,
+        "green": 135
       }
     },
     "requirement": [ [ "trigger_poledancer_0_inactive", "trigger_player_has_funds_10000" ] ],
+    "trigger": {
+      "trigger_poledancer_0_inactive": {
+        "key": "state",
+        "name": "check_variable",
+        "variable": "corpoplaza_dancers_poledancer_0_activated",
+        "value": false,
+        "operator": "=",
+        "helperTitle": "Score : Custom Variable",
+        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+        "comment": "Check if poledancer 0 is inactive",
+        "type": "boolean"
+      },
+      "trigger_player_has_funds_10000": {
+        "value": 10000,
+        "name": "money",
+        "helper": "This trigger will be triggered when you has enough money",
+        "comment": "Verify player has the funds available",
+        "helperTitle": "Money : has enough"
+      }
+    }
+  }, {
+    "context": [],
+    "icon": "PayIcon",
     "action": [ {
-      "key": "state",
-      "value": true,
       "type": "boolean",
+      "value": true,
+      "key": "state",
+      "comment": "Set activation variable",
       "name": "set_variable",
-      "variable": "corpoplaza_dancers_poledancer_0_activated",
-      "helperTitle": "Variable : Set Variable",
       "helper": "This action will set a value for a key of a Variable ",
-      "comment": "Set activation variable"
+      "variable": "corpoplaza_dancers_lapdancer_0_activated",
+      "helperTitle": "Variable : Set Variable"
     }, {
+      "value": 15000,
       "name": "remove_money",
-      "value": 10000,
-      "helperTitle": "Money : Remove Money",
       "helper": "This action will make remove a amount of money",
-      "comment": "Deduct rental fee"
+      "comment": "Deduct rental fee",
+      "helperTitle": "Money : Remove Money"
     }, {
+      "value": "Private lap dancer hired for apartment!",
       "type": 4,
-      "duration": 5,
-      "name": "custom_notification",
+      "comment": "Show notification (needed: you know why)",
       "helperTitle": "UI : Display Custom Notification",
-      "value": "Private pole dancer hired for apartment!",
       "helper": "This action will display Custom Notification.  Type : \r\n Undefined = 0,\r\n   Negative = 1,\r\n   Neutral = 2,\r\n   Vehicle = 3,\r\n   Apartment = 4,\r\n   Relic = 5,\r\n   Money = 6,\r\n   Reveal = 7 ",
-      "comment": "Show notification (needed: subtitles don't always work)"
+      "duration": 5,
+      "name": "custom_notification"
     }, {
-      "type": 1,
+      "target": "player",
+      "name": "subtitle",
+      "duration": 3,
       "speaker": "Receptionist",
+      "title": "Destiny has been allocated to you, she awaits you in your apartment!",
       "helperTitle": "Dialog : run a subtitle",
       "helper": "This action will fire a subtitle on your bottom portion of the screen, The duration must complete in order for the next action to call. Type value just keep at 1 for now.",
       "comment": "Speak to player",
-      "duration": 3,
-      "name": "subtitle",
-      "title": "Bambi has been allocated to you, she awaits you in your apartment!",
-      "target": "player"
-    } ]
-  }, {
-    "icon": "PayIcon",
-    "context": [],
+      "type": 1
+    } ],
     "description": "15000 Hire Private Lap Dancer",
     "style": {
       "color": {
         "blue": 16,
-        "green": 135,
-        "red": 195
-      }
-    },
-    "trigger": {
-      "trigger_lapdancer_0_inactive": {
-        "operator": "=",
-        "type": "boolean",
-        "value": false,
-        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
-        "comment": "Check if dancer is inactive",
-        "key": "state",
-        "name": "check_variable",
-        "helperTitle": "Score : Custom Variable",
-        "variable": "corpoplaza_dancers_lapdancer_0_activated"
-      },
-      "trigger_player_has_funds_15000": {
-        "name": "money",
-        "value": 15000,
-        "helperTitle": "Money : has enough",
-        "helper": "This trigger will be triggered when you has enough money",
-        "comment": "Verify player has the funds available"
+        "red": 195,
+        "green": 135
       }
     },
     "requirement": [ [ "trigger_lapdancer_0_inactive", "trigger_player_has_funds_15000" ] ],
+    "trigger": {
+      "trigger_lapdancer_0_inactive": {
+        "key": "state",
+        "name": "check_variable",
+        "variable": "corpoplaza_dancers_lapdancer_0_activated",
+        "value": false,
+        "operator": "=",
+        "helperTitle": "Score : Custom Variable",
+        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+        "comment": "Check if dancer is inactive",
+        "type": "boolean"
+      },
+      "trigger_player_has_funds_15000": {
+        "value": 15000,
+        "name": "money",
+        "helper": "This trigger will be triggered when you has enough money",
+        "comment": "Verify player has the funds available",
+        "helperTitle": "Money : has enough"
+      }
+    }
+  }, {
+    "context": [],
     "action": [ {
-      "key": "state",
-      "value": true,
-      "type": "boolean",
-      "name": "set_variable",
-      "variable": "corpoplaza_dancers_lapdancer_0_activated",
-      "helperTitle": "Variable : Set Variable",
-      "helper": "This action will set a value for a key of a Variable ",
-      "comment": "Set activation variable"
-    }, {
-      "name": "remove_money",
-      "value": 15000,
-      "helperTitle": "Money : Remove Money",
-      "helper": "This action will make remove a amount of money",
-      "comment": "Deduct rental fee"
-    }, {
-      "type": 4,
-      "duration": 5,
-      "name": "custom_notification",
-      "helperTitle": "UI : Display Custom Notification",
-      "value": "Private lap dancer hired for apartment!",
-      "helper": "This action will display Custom Notification.  Type : \r\n Undefined = 0,\r\n   Negative = 1,\r\n   Neutral = 2,\r\n   Vehicle = 3,\r\n   Apartment = 4,\r\n   Relic = 5,\r\n   Money = 6,\r\n   Reveal = 7 ",
-      "comment": "Show notification (needed: you know why)"
-    }, {
-      "type": 1,
+      "target": "player",
+      "name": "subtitle",
+      "duration": 6,
       "speaker": "Receptionist",
+      "title": "Oh no! You want to dismiss a dancer? That's a shame! Who would you like to dismiss?",
       "helperTitle": "Dialog : run a subtitle",
       "helper": "This action will fire a subtitle on your bottom portion of the screen, The duration must complete in order for the next action to call. Type value just keep at 1 for now.",
       "comment": "Speak to player",
-      "duration": 3,
-      "name": "subtitle",
-      "title": "Destiny has been allocated to you, she awaits you in your apartment!",
-      "target": "player"
-    } ]
-  }, {
+      "type": 1
+    }, {
+      "helperTitle": "Dialog : run a dialog",
+      "name": "dialog",
+      "helper": "This action will fire a dialog if the trigger requirements are met",
+      "comment": "Move to next options dialog",
+      "dialog": "choice_corpoplaza_roomservice_0_dismiss"
+    } ],
+    "icon": "WaitIcon",
     "description": "Dismiss Dancers",
-    "context": [],
     "style": {
       "color": []
-    },
-    "action": [ {
-      "type": 1,
-      "speaker": "Receptionist",
-      "helperTitle": "Dialog : run a subtitle",
-      "helper": "This action will fire a subtitle on your bottom portion of the screen, The duration must complete in order for the next action to call. Type value just keep at 1 for now.",
-      "comment": "Speak to player",
-      "duration": 6,
-      "name": "subtitle",
-      "title": "Oh no! You want to dismiss a dancer? That's a shame! Who would you like to dismiss?",
-      "target": "player"
-    }, {
-      "name": "dialog",
-      "dialog": "choice_corpoplaza_roomservice_0_dismiss",
-      "helperTitle": "Dialog : run a dialog",
-      "helper": "This action will fire a dialog if the trigger requirements are met",
-      "comment": "Move to next options dialog"
-    } ],
-    "trigger": {
-      "trigger_floordancer_0_active": {
-        "operator": "=",
-        "type": "boolean",
-        "variable": "corpoplaza_dancers_floordancer_0_activated",
-        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
-        "comment": "Check if floor dancer 0 is active",
-        "key": "state",
-        "name": "check_variable",
-        "value": true,
-        "helperTitle": "Score : Custom Variable",
-        "context": []
-      },
-      "trigger_poledancer_0_active": {
-        "operator": "=",
-        "type": "boolean",
-        "helperTitle": "Score : Custom Variable",
-        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
-        "comment": "Check if pole dancer 0 is active",
-        "key": "state",
-        "name": "check_variable",
-        "value": true,
-        "variable": "corpoplaza_dancers_poledancer_0_activated",
-        "context": []
-      },
-      "trigger_lapdancer_0_active": {
-        "operator": "=",
-        "type": "boolean",
-        "helperTitle": "Score : Custom Variable",
-        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
-        "comment": "Check if lap dancer 0 is active",
-        "key": "state",
-        "name": "check_variable",
-        "value": true,
-        "variable": "corpoplaza_dancers_lapdancer_0_activated",
-        "context": []
-      }
     },
     "requirement": [ [ "trigger_floordancer_0_active" ], [ "trigger_poledancer_0_active" ], [ "trigger_lapdancer_0_active" ] ],
-    "icon": "WaitIcon"
+    "trigger": {
+      "trigger_floordancer_0_active": {
+        "context": [],
+        "key": "state",
+        "name": "check_variable",
+        "variable": "corpoplaza_dancers_floordancer_0_activated",
+        "value": true,
+        "operator": "=",
+        "type": "boolean",
+        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+        "comment": "Check if floor dancer 0 is active",
+        "helperTitle": "Score : Custom Variable"
+      },
+      "trigger_lapdancer_0_active": {
+        "context": [],
+        "key": "state",
+        "name": "check_variable",
+        "variable": "corpoplaza_dancers_lapdancer_0_activated",
+        "value": true,
+        "operator": "=",
+        "type": "boolean",
+        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+        "comment": "Check if lap dancer 0 is active",
+        "helperTitle": "Score : Custom Variable"
+      },
+      "trigger_poledancer_0_active": {
+        "context": [],
+        "key": "state",
+        "name": "check_variable",
+        "variable": "corpoplaza_dancers_poledancer_0_activated",
+        "value": true,
+        "operator": "=",
+        "type": "boolean",
+        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+        "comment": "Check if pole dancer 0 is active",
+        "helperTitle": "Score : Custom Variable"
+      }
+    }
   }, {
-    "description": "Nevermind",
     "context": [],
-    "style": {
-      "color": []
-    },
     "action": [ {
-      "type": 1,
+      "target": "player",
+      "name": "subtitle",
+      "duration": 3,
       "speaker": "Receptionist",
+      "title": "I understand, maybe some other time.",
       "helperTitle": "Dialog : run a subtitle",
       "helper": "This action will fire a subtitle on your bottom portion of the screen, The duration must complete in order for the next action to call. Type value just keep at 1 for now.",
       "comment": "Speak to player",
-      "duration": 3,
-      "name": "subtitle",
-      "title": "I understand, maybe some other time.",
-      "target": "player"
+      "type": 1
     } ],
-    "trigger": [],
+    "icon": "TalkIcon",
+    "description": "Nevermind",
+    "style": {
+      "color": []
+    },
     "requirement": [],
-    "icon": "TalkIcon"
-  } ]
+    "trigger": []
+  } ],
+  "desc": "",
+  "trigger": [],
+  "requirement": [],
+  "header": {
+    "version": 3
+  },
+  "speaker": "Receptionist"
 }
