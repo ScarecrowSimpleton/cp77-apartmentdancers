@@ -1,74 +1,121 @@
 {
-  "name": "Instruct Sindelicious",
   "header": {
     "version": 1
   },
-  "timer": 0,
-  "group": "corpoApartmentStrippers",
-  "tag": "interaction_corpoplaza_floordance_selection_0",
   "context": [],
-  "key": "QuickMelee",
+  "group": "ApartmentDancers",
+  "tag": "interaction_corpoplaza_floordance_selection_0",
+  "sorttag": "none",
   "trigger": {
-    "trigger_player_location": {
-      "helper": "3Dposition",
-      "comment": "Check player location",
-      "name": "3Dposition",
-      "x": -1607.3037109375,
-      "z": 49.200004577637,
-      "range": 25,
-      "y": 357.45159912109,
-      "helperTitle": "3Dposition"
-    },
     "trigger_floordancer_0_activated": {
-      "key": "state",
-      "operator": "=",
-      "variable": "corpoplaza_dancers_floordancer_0_activated",
-      "type": "boolean",
-      "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
-      "comment": "Check if dancer is activated",
       "value": true,
       "helperTitle": "Score : Custom Variable",
-      "name": "check_variable"
+      "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+      "comment": "Check if dancer is activated",
+      "variable": "corpoplaza_dancers_floordancer_0_activated",
+      "name": "check_variable",
+      "type": "boolean",
+      "key": "state",
+      "operator": "="
+    },
+    "trigger_player_location": {
+      "x": -1607.3037109375,
+      "z": 49.200004577637,
+      "helperTitle": "3Dposition",
+      "helper": "3Dposition",
+      "comment": "Check player location",
+      "y": 357.45159912109,
+      "range": 25,
+      "name": "3Dposition"
     }
   },
+  "requirement": [ [ "trigger_player_location", "trigger_floordancer_0_activated" ] ],
+  "timer": 0,
+  "name": "Instruct Sindelicious",
+  "type": "interact",
+  "hold": true,
+  "input": 2,
+  "icon": "GiveTakeIcon",
+  "action": [ {
+    "if_action": [ {
+      "dialog": "choice_corpoplaza_floordance_selection_0",
+      "helper": "This action will fire a dialog if the trigger requirements are met",
+      "comment": "Show dance options",
+      "helperTitle": "Dialog : run a dialog",
+      "name": "dialog"
+    } ],
+    "else_action": [ {
+      "if_action": [ {
+        "value": true,
+        "type": "boolean",
+        "helperTitle": "Variable : Set Variable",
+        "helper": "This action will set a value for a key of a Variable ",
+        "comment": "Stop existing dances",
+        "variable": "corpoplaza_dancers_floordancer_0_interrupt_stop_dance",
+        "key": "state",
+        "name": "set_variable"
+      }, {
+        "dialog": "choice_corpoplaza_floordance_selection_0",
+        "helper": "This action will fire a dialog if the trigger requirements are met",
+        "comment": "Show dance options",
+        "helperTitle": "Dialog : run a dialog",
+        "name": "dialog"
+      } ],
+      "helperTitle": "Logic : If",
+      "trigger": {
+        "value": true,
+        "type": "boolean",
+        "helperTitle": "Score : Custom Variable",
+        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+        "key": "state",
+        "operator": "=",
+        "variable": "corpoplaza_dancers_floordancer_0_setting_always_dance",
+        "name": "check_variable"
+      },
+      "else_action": [ {
+        "value": "Please wait for existing dances to finish!",
+        "helperTitle": "UI : Display Custom Notification",
+        "helper": "This action will display Custom Notification.  Type : \r\n Undefined = 0,\r\n   Negative = 1,\r\n   Neutral = 2,\r\n   Vehicle = 3,\r\n   Apartment = 4,\r\n   Relic = 5,\r\n   Money = 6,\r\n   Reveal = 7 ",
+        "duration": 5,
+        "comment": "Warn user",
+        "type": 1,
+        "name": "custom_notification"
+      } ],
+      "helper": "This action will check a trigger and execute IF actions if the trigger is OK or ELSE action if the trigger is not OK",
+      "name": "if"
+    } ],
+    "trigger": {
+      "value": true,
+      "type": "boolean",
+      "helperTitle": "Score : Custom Variable",
+      "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
+      "key": "state",
+      "operator": "!=",
+      "variable": "corpoplaza_dancers_floordancer_0_isdancing",
+      "name": "check_variable"
+    },
+    "comment": "Check if we can issue a new dance",
+    "helperTitle": "Logic : If",
+    "helper": "This action will check a trigger and execute IF actions if the trigger is OK or ELSE action if the trigger is not OK",
+    "name": "if"
+  } ],
   "style": {
-    "textcolor": {
-      "blue": 255,
+    "iconcolor": {
       "green": 255,
-      "red": 255
+      "red": 255,
+      "blue": 255
+    },
+    "textcolor": {
+      "green": 255,
+      "red": 255,
+      "blue": 255
     },
     "bgcolor": {
-      "blue": 255,
       "green": 255,
-      "red": 255
-    },
-    "iconcolor": {
-      "blue": 255,
-      "green": 255,
-      "red": 255
+      "red": 255,
+      "blue": 255
     }
   },
-  "sorttag": "none",
-  "type": "interact",
-  "input": 1,
-  "display": "event_interact",
-  "action": [ {
-    "helper": "This action will set a value for a key of a Variable ",
-    "comment": "Stop existing dances",
-    "name": "set_variable",
-    "helperTitle": "Variable : Set Variable",
-    "variable": "corpoplaza_dancers_floordancer_0_interrupt_stop_dance",
-    "key": "state",
-    "value": true,
-    "type": "boolean"
-  }, {
-    "dialog": "choice_corpoplaza_floordance_selection_0",
-    "comment": "Show dance options",
-    "name": "dialog",
-    "helper": "This action will fire a dialog if the trigger requirements are met",
-    "helperTitle": "Dialog : run a dialog"
-  } ],
-  "hold": true,
-  "requirement": [ [ "trigger_player_location", "trigger_floordancer_0_activated" ] ],
-  "icon": "GiveTakeIcon"
+  "key": "QuickMelee",
+  "display": "event_interact"
 }

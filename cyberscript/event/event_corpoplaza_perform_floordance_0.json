@@ -136,65 +136,49 @@
     "unlockcamera": true,
     "anim": "kneel__lk_on_ground__01__sexy_dance__01"
   }, {
-    "comment": "Wait for an interrupt if always dance is activated",
-    "triggers": {
-      "trigger_setting_floordancer_0_always_dance": {
-        "key": "state",
+    "if_action": [ {
+      "comment": "Wait for an interrupt if always dance is activated",
+      "trigger": {
         "type": "boolean",
-        "value": true,
+        "key": "state",
         "name": "check_variable",
-        "helperTitle": "Score : Custom Variable",
-        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
-        "comment": "",
         "operator": "=",
-        "variable": "corpoplaza_dancers_floordancer_0_setting_always_dance"
-      }
-    },
+        "value": true,
+        "variable": "corpoplaza_dancers_floordancer_0_interrupt_stop_dance",
+        "helperTitle": "Score : Custom Variable",
+        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty"
+      },
+      "name": "wait_for_trigger",
+      "help": "Wait that trigger condition is valid",
+      "triggers": [],
+      "requirement": [],
+      "helperTitle": "Logic : Wait For Trigger",
+      "helper": "This action will wait that the trigger is valid before do the next action "
+    } ],
+    "else_action": [ {
+      "comment": "Dance for a minute",
+      "triggers": [],
+      "name": "wait_second",
+      "help": "Wait x second",
+      "value": 120,
+      "requirement": [],
+      "helperTitle": "Logic : Wait X seconds",
+      "helper": "This action will wait x second before perform the next action"
+    } ],
+    "name": "if",
+    "comment": "If always dance is active, keep dancing, else wait for a minute",
     "trigger": {
       "type": "boolean",
-      "helperTitle": "Score : Custom Variable",
       "key": "state",
-      "variable": "corpoplaza_dancers_floordancer_0_interrupt_stop_dance",
-      "value": true,
       "name": "check_variable",
       "operator": "=",
+      "value": true,
+      "variable": "corpoplaza_dancers_floordancer_0_setting_always_dance",
+      "helperTitle": "Score : Custom Variable",
       "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty"
     },
-    "help": "Wait that trigger condition is valid",
-    "requirement": [ [ "trigger_setting_floordancer_0_always_dance" ] ],
-    "name": "wait_for_trigger",
-    "helperTitle": "Logic : Wait For Trigger",
-    "helper": "This action will wait that the trigger is valid before do the next action "
-  }, {
-    "comment": "Reset interrupt",
-    "type": "boolean",
-    "key": "state",
-    "variable": "corpoplaza_dancers_floordancer_0_interrupt_stop_dance",
-    "value": false,
-    "name": "set_variable",
-    "helperTitle": "Variable : Set Variable",
-    "helper": "This action will set a value for a key of a Variable "
-  }, {
-    "comment": "Dance for a minute",
-    "triggers": {
-      "trigger_floordancer_0_setting_always_dance_off": {
-        "key": "state",
-        "type": "boolean",
-        "value": false,
-        "name": "check_variable",
-        "helperTitle": "Score : Custom Variable",
-        "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
-        "comment": "",
-        "operator": "=",
-        "variable": "corpoplaza_dancers_floordancer_0_setting_always_dance"
-      }
-    },
-    "value": 120,
-    "help": "Wait x second",
-    "requirement": [ [ "trigger_floordancer_0_setting_always_dance_off" ] ],
-    "name": "wait_second",
-    "helperTitle": "Logic : Wait X seconds",
-    "helper": "This action will wait x second before perform the next action"
+    "helperTitle": "Logic : If",
+    "helper": "This action will check a trigger and execute IF actions if the trigger is OK or ELSE action if the trigger is not OK"
   }, {
     "comment": "Stop anim",
     "tag": "npc_corpoplaza_floordancer_0",

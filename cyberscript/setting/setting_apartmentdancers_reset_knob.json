@@ -1,0 +1,107 @@
+{
+  "tag": "setting_apartmentdancers_reset_knob",
+  "type": "button",
+  "category": "apartmentDancersGlobal",
+  "categorylibelle": "Apartment Dancers (Global)",
+  "label": "Reset Knob... Knob... Reset... Knob.. Reset Knob",
+  "buttonlabel": "Reset Mod",
+  "textsize": 45,
+  "description": "Resets the mod to default settings, only use this if you're having problems with the mod (such as dancers not responding etc). Once you've pressed this button, unpause the game then whack F5 (quick save) and restart the game.",
+  "action": [ {
+    "name": "set_variable",
+    "type": "boolean",
+    "key": "state",
+    "variable": "corpoplaza_dancers_poledancer_0_activated",
+    "value": false,
+    "comment": "Disable dancer: Corpo Plaza Pole Dancer 0"
+  }, {
+    "tag": "npc_corpoplaza_poledancer_0",
+    "name": "despawn_entity",
+    "comment": "Despawn dancer: Corpo Plaza Corpo Plaza Pole Dancer 0"
+  }, {
+    "name": "set_variable",
+    "type": "boolean",
+    "key": "state",
+    "variable": "corpoplaza_dancers_lapdancer_0_activated",
+    "value": false,
+    "comment": "Disable dancer: Corpo Plaza Lap Dancer 0"
+  }, {
+    "tag": "npc_corpoplaza_lapdancer_0",
+    "name": "despawn_entity",
+    "comment": "Despawn dancer: Corpo Plaza Lap Dancer 0"
+  }, {
+    "name": "set_variable",
+    "type": "boolean",
+    "key": "state",
+    "variable": "corpoplaza_dancers_floordancer_0_activated",
+    "value": false,
+    "comment": "Disable dancer: Corpo Plaza Floor Dancer 0"
+  }, {
+    "tag": "npc_corpoplaza_floordancer_0",
+    "name": "despawn_entity",
+    "comment": "Despawn dancer: Corpo Plaza Floor Dancer 0"
+  }, {
+    "name": "set_variable",
+    "type": "boolean",
+    "key": "state",
+    "variable": "corpoplaza_dancers_floordancer_0_setting_always_dance",
+    "value": false,
+    "comment": "Reset settings: Corpo Plaza Floor Dancer 0 Always dance"
+  }, {
+    "name": "set_variable",
+    "type": "boolean",
+    "key": "state",
+    "variable": "corpoplaza_dancers_floordancer_0_setting_routine",
+    "value": false,
+    "comment": "Reset settings: Corpo Plaza Floor Dancer 0 Routine"
+  }, {
+    "name": "set_variable",
+    "type": "boolean",
+    "key": "state",
+    "variable": "corpoplaza_dancers_floordancer_0_dance_floor_0_active",
+    "value": false,
+    "comment": "Reset dance status: Corpo Plaza Floor Dancer 0 Dance Floor 0"
+  }, {
+    "name": "set_variable",
+    "type": "boolean",
+    "key": "state",
+    "variable": "corpoplaza_dancers_floordancer_0_dance_counter_0_active",
+    "value": false,
+    "comment": "Reset dance status: Corpo Plaza Floor Dancer 0 Dance Counter 0"
+  }, {
+    "name": "set_variable",
+    "type": "boolean",
+    "key": "state",
+    "variable": "corpoplaza_dancers_floordancer_0_isdancing",
+    "value": false,
+    "comment": "Reset dance status: Corpo Plaza Floor dancer 0 Is Dancing"
+  }, {
+    "name": "set_variable",
+    "type": "boolean",
+    "key": "state",
+    "variable": "corpoplaza_dancers_floordancer_0_interrupt_stop_dance",
+    "value": false,
+    "comment": "Reset interrupt: Corpo Plaza Dance Floor 0 Stop Dance"
+  }, {
+    "name": "set_variable",
+    "type": "boolean",
+    "key": "state",
+    "variable": "corpoplaza_dancers_lapdancer_0_dance_lap_0_active",
+    "value": false,
+    "comment": "Reset dance status: Corpo Plaza Lap Dancer 0 Lapdance Active"
+  }, {
+    "name": "set_variable",
+    "type": "boolean",
+    "key": "state",
+    "variable": "corpoplaza_dancers_lapdancer_0_dance_lap_0_requested",
+    "value": false,
+    "comment": "Reset dance status: Corpo Plaza Lap Dancer 0 Lapdance Requested"
+  }, {
+    "name": "set_variable",
+    "type": "boolean",
+    "key": "state",
+    "variable": "corpoplaza_dancers_lapdancer_0_dance_lap_0_end",
+    "value": false,
+    "comment": "Reset dance status: Corpo Plaza Lap Dancer 0 Lapdance End"
+  } ],
+}
