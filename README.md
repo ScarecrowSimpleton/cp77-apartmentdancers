@@ -44,7 +44,9 @@ Remember to also install any requirements that the above have.
 This modification does not require any DLC and will work with the base game.
 
 ## Official release channels
-This mod is not yet released.
+This mod is officially released in the following locations:
+* [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/10793)
+* [Github](https://github.com/ScarecrowSimpleton/cp77-apartmentdancers/releases)
 
 ## Building
 Generally, you shouldn't need to do this. You can just copy the files straight to your games mod directories. However, if you do wish to create a release zip a simple build script is included.
