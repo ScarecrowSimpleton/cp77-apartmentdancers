@@ -52,7 +52,7 @@
     "type": "boolean",
     "key": "state",
     "variable": "corpoplaza_dancers_floordancer_0_setting_routine",
-    "value": false,
+    "value": true,
     "comment": "Reset settings: Corpo Plaza Floor Dancer 0 Routine"
   }, {
     "name": "set_variable",

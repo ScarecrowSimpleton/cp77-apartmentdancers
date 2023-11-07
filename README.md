@@ -1,13 +1,13 @@
 # Apartment Dancers for CyberPunk 2077
-This lighthearted mod simply adds three hirable dancers to your Corpo Plaza apartment. These dancers include the ability to perform a lap dance, pole dances and a few other dances.
+This lighthearted mod simply adds three hireable dancers to your Corpo Plaza apartment. These dancers include the ability to perform a lap dance, pole dances and a few other dances.
 
-I felt this fits the lore of the game quite well, given the way such content is portayed within the Cyberpunk 2077 universe.
+I felt this fits the lore of the game quite well, given the way such content is portrayed within the Cyberpunk 2077 universe.
 
 Currently there are 3 dancer options, and each one can be hired or dismissed as you see fit! But do bear in mind, you will have to pay to hire them. They don't work for free you know. ;-)
 
 The mod is built using CyberScript primarily, which does all the heavy lifting. The mod does include a AMM preset which you can use to spawn the necessary props for the mods actions.
 
-Some of the props in the preset are optional and simply added to make the apartment look a little better, as it's basically a minimalised version of my own personal preset. If you're like me, you probably already have your apartment set up how you like, as such I kept the preset minimal and ensured the json file was readable so you may simply add the required props to your own set (they are tagged as required/optional, where necessary).
+Some of the props in the preset are optional and simply added to make the apartment look a little better, as it's basically a minimal version of my own personal preset. If you're like me, you probably already have your apartment set up how you like, as such I kept the preset minimal and ensured the json file was readable so you may simply add the required props to your own set (they are tagged as required/optional, where necessary).
 
 This mod may be inappropriate for use while at for work.
 
