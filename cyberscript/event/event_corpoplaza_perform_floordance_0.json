@@ -156,11 +156,11 @@
       "helper": "This action will wait that the trigger is valid before do the next action "
     } ],
     "else_action": [ {
-      "comment": "Dance for a minute",
+      "comment": "Dance for 20 in-game minutes",
       "triggers": [],
-      "name": "wait_second",
+      "name": "wait",
       "help": "Wait x second",
-      "value": 120,
+      "value": 20,
       "requirement": [],
       "helperTitle": "Logic : Wait X seconds",
       "helper": "This action will wait x second before perform the next action"
