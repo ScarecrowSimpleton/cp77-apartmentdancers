@@ -106,12 +106,12 @@ cd "$BUILDDIR"
 7z t $MODARC.zip
 
 # Calculate sum
-sha256sum $MODARC.zip > sha512sum
+sha256sum $MODARC.zip > sha256sum
 
 echo
 echo "Archive created! Archive has the following sum:"
-cat sha512sum
+cat sha256sum
 echo
-echo "Sum has been saved in sha512sum file"
+echo "Sum has been saved in sha256sum file"
 
 exit
