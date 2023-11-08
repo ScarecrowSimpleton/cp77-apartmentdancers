@@ -9,9 +9,9 @@
     "tag": "corpoplaza_dancers_floordancer_0_setting_always_dance"
   },
   "action": [],
-  "label": "Disable Dancer 1 Dance Time Limit",
+  "label": "Continuous Dance for Sindelicious (Dancer 1)",
   "tag": "setting_corpoplaza_floordancer_0_always_dance",
-  "description": "Once a dance has been activated, it will continue until you choose another dance.",
+  "description": "Disables the time limit for Sindelicious. In this mode they will dance until you instruct them to stop. This setting is ideal for preparing screenshots or.. other things ;-)",
   "categorylibelle": "Apartment Dancers (Corpo Plaza)",
   "defaultvalue": false
 }

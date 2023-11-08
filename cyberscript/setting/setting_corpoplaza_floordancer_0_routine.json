@@ -9,9 +9,9 @@
     "tag": "corpoplaza_dancers_floordancer_0_setting_routine"
   },
   "action": [],
-  "label": "Activate Dancer 1 Routine",
+  "label": "Activate Sindelicious's Routine (Dancer 1)",
   "tag": "setting_corpoplaza_floordancer_0_routine",
-  "description": "Enables or disables the routine movement of Dancer 1",
+  "description": "Enables or disables the routine movement of Sindelicious (Dancer 1)",
   "categorylibelle": "Apartment Dancers (Corpo Plaza)",
   "defaultvalue": true
 }
