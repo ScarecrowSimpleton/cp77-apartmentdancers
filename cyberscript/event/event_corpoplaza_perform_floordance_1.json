@@ -1,5 +1,5 @@
 {
-  "tag": "event_corpoplaza_perform_floordance_0",
+  "tag": "event_corpoplaza_perform_floordance_1",
   "way": "world",
   "action": [ {
     "comment": "Reset interrupt",
@@ -43,7 +43,7 @@
     "comment": "Go to location",
     "move": "Walk",
     "help": "This action will move an entity with several custom parameter ",
-    "position_tag": "node_corpoplaza_dance_floor_0",
+    "position_tag": "node_corpoplaza_dance_floor_1",
     "position_way": "normal",
     "position_distance": 5,
     "position_helper": "at||relative_to_entity||node||player_look_at||poi||mappin||fasttravel||custom_place||custom_room",
@@ -88,7 +88,7 @@
       "helperTitle": "Entity : At position",
       "position": "node",
       "range": 0.0099999997764826,
-      "position_tag": "node_corpoplaza_dance_floor_0",
+      "position_tag": "node_corpoplaza_dance_floor_1",
       "position_way": "normal",
       "position_distance": 5,
       "position_helper": "at||relative_to_entity||node||player_look_at||poi||mappin||fasttravel||custom_place||custom_room",
@@ -130,11 +130,11 @@
     "helper": "This action will apply animation to entity",
     "comment": "Get ya boogie on an dance!",
     "roll": 0,
-    "yaw": 90,
+    "yaw": 180.000,
     "workspot": "cyberscript_workspot_base",
     "pitch": 0,
     "unlockcamera": true,
-    "anim": "kneel__lk_on_ground__01__sexy_dance__01"
+    "anim": "stand__2h_on_hip__03__sexy_dance__01"
   }, {
     "if_action": [ {
       "comment": "Wait for an interrupt if always dance is activated",
@@ -187,7 +187,7 @@
     "helper": "This action will stop animation to entity"
   }, {
     "comment": "Finish Dancing",
-    "variable": "corpoplaza_dancers_floordancer_0_dance_floor_0_active",
+    "variable": "corpoplaza_dancers_floordancer_0_dance_floor_1_active",
     "key": "state",
     "type": "boolean",
     "value": false,
@@ -204,9 +204,9 @@
     "helperTitle": "Variable : Set Variable",
     "helper": "This action will set a value for a key of a Variable "
   } ],
-  "name": "TV Dance (Floor Dance 0)",
+  "name": "Window Dance (Floor Dance 1)",
   "trigger": {
-    "trigger_dance_floor_0_activated": {
+    "trigger_dance_floor_1_activated": {
       "key": "state",
       "type": "boolean",
       "value": true,
@@ -215,12 +215,12 @@
       "helper": "This trigger will be triggered when the value of the key of custom variable is the same that trigger value. Operator can be =, !=, contains, empty, notempty",
       "comment": "Wait for dance to be activated",
       "operator": "=",
-      "variable": "corpoplaza_dancers_floordancer_0_dance_floor_0_active"
+      "variable": "corpoplaza_dancers_floordancer_0_dance_floor_1_active"
     }
   },
   "header": {
     "version": 1
   },
-  "requirement": [ [ "trigger_dance_floor_0_activated" ] ],
+  "requirement": [ [ "trigger_dance_floor_1_activated" ] ],
   "context": []
 }

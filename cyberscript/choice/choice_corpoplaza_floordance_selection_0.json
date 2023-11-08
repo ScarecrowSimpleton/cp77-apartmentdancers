@@ -38,6 +38,25 @@
     "context": [],
     "description": "Kitchen Counter Dance"
   }, {
+    "icon": "ProstituteIcon",
+    "trigger": [],
+    "style": {
+      "color": []
+    },
+    "action": [ {
+      "helper": "This action will set a value for a key of a Variable ",
+      "name": "set_variable",
+      "helperTitle": "Variable : Set Variable",
+      "value": true,
+      "key": "state",
+      "comment": "Perform Dance",
+      "variable": "corpoplaza_dancers_floordancer_0_dance_floor_1_active",
+      "type": "boolean"
+    } ],
+    "requirement": [],
+    "context": [],
+    "description": "Window Dance"
+  }, {
     "icon": "",
     "trigger": [],
     "action": [],

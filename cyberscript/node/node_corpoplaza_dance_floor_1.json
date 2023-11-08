@@ -1,0 +1,14 @@
+{
+  "header": {
+    "version": 2
+  },
+  "tag": "node_corpoplaza_dance_floor_1",
+  "name": "Floor Dance Spot 1",
+  "sort": "danceLocations",
+  "x": -1604.525,
+  "y": 349.692,
+  "z": 49.200,
+  "gameplay_x": -1604.525,
+  "gameplay_y": 349.692,
+  "gameplay_z": 49.200
+}
